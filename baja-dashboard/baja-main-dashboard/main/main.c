@@ -11,7 +11,7 @@
 #include "web_server.h"
 
 #define HALL_SENSOR_GPIO 18
-#define WHEEL_CIRCUMFERENCE 1.0         //change this to actual measurement
+#define WHEEL_CIRCUMFERENCE 1.72        //change this to actual measurement
 #define WIFI_SSID      "BAJA_dashboard"
 #define WIFI_PASS      "baja2026" 
 
