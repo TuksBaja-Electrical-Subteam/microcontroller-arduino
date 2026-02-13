@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BAJA Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: 'Arial Black', sans-serif; text-align: center; background: #000; color: #ff5500; }
+        .container { border: 4px solid #333; margin: 20px auto; padding: 20px; width: 80%; border-radius: 20px; }
+        #speed { font-size: 120px; text-shadow: 0 0 20px #ff5500; }
+        .unit { font-size: 30px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="unit">BAJA SPEED</div>
+        <div id="speed">0.0</div>
+        <div class="unit">KM/H</div>
+    </div>
+    <script>
+        setInterval(() => {
+            fetch('/data').then(r => r.text()).then(v => {
+                document.getElementById('speed').innerText = v;
+            });
+        }, 200);
+    </script>
+</body>
+</html>
